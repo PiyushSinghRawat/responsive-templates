@@ -40,6 +40,7 @@
         .font-5 {
             font-size: 1.5rem;
             opacity: .7;
+            /* font-weight: 900; */
         }
         
         .navbar-nav .dropdown:hover .dropdown-menu {
@@ -57,6 +58,7 @@
             }
             .font-5 {
                 font-size: 10px;
+                /* font-weight: normal; */
             }
         }
         /* carousel */
@@ -65,6 +67,7 @@
             width: max-content;
             margin-left: auto;
             margin-right: auto;
+            background-color: black;
         }
         
         .carouselControl {
@@ -72,6 +75,7 @@
             width: 50px;
             margin-top: auto;
             margin-bottom: auto;
+            background-color: black;
         }
         
         @media (max-width: 600px) {
@@ -122,7 +126,7 @@
             }
             .grid1 div P {
                 font-size: 10px;
-                /* font-weight: 900; */
+                font-weight: normal;
             }
         }
         /* blue image */
@@ -130,6 +134,38 @@
         .textedImage {
             width: 100%;
             border-radius: 70px;
+        }
+        
+        .grid3 {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .photo-cakeText {
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+            padding: 0;
+            overflow: hidden;
+            margin: 0;
+            white-space: normal;
+            /* Prevent text from wrapping */
+            /* text-overflow: clip; */
+            /* Show ellipsis when text overflows */
+            position: relative;
+        }
+        
+        .ratings {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        
+        @media (max-width: 750px) {
+            .ratings {
+                display: none;
+            }
+            .carouselControl {
+                background-color: transparent;
+            }
         }
     </style>
 </head>
@@ -140,15 +176,15 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"> <img src="//assets.winni.in/img/newlogo/logo-test-36-CL-1.png" alt="Winni"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav mx-auto">
                         <form class="d-flex">
-                            <input class="form-control border-0 bg-light" type="text" placeholder="Search">
+                            <input class="form-control border-0 bg-light" type="text" placeholder="Search for gifts">
                             <button class="btn  bg-light" type="button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                         </form>
                         <li class="nav-item bg-light ms-3">
                             <a class="nav-link" href="#"><i class="fa-solid fa-location-dot"></i> Delivery Location</a>
@@ -280,7 +316,7 @@
         <div id="carouselContainer" class="carousel slide" data-bs-ride="carousel">
 
             <!-- Indicators/dots -->
-            <div class="carousel-indicators bg-black">
+            <div class="carousel-indicators ">
                 <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#carouselContainer" data-bs-slide-to="2"></button>
@@ -304,52 +340,52 @@
                 </div>
             </div>
             <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev carouselControl rounded-circle bg-black" type="button" data-bs-target="#carouselContainer" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-            <button class="carousel-control-next carouselControl rounded-circle bg-black" type="button" data-bs-target="#carouselContainer" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+            <button class="carousel-control-prev carouselControl rounded-circle " type="button" data-bs-target="#carouselContainer" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next carouselControl rounded-circle " type="button" data-bs-target="#carouselContainer" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <div class="grid1 cont  mt-5 mb-5">
+        <section class="grid1 cont  mt-5 mb-5">
             <div class="row ">
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/cake.jpg" alt="">
-                            <p class="text-center"><b>Cakes</b></p>
+                            <p class="text-center">Cakes</p>
                         </div>
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/flowers.jpg" alt="">
-                            <p class="text-center"><b>Flowers</b></p>
+                            <p class="text-center">Flowers</p>
                         </div>
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/combos.jpg" alt="">
-                            <p class="text-center"><b>Combos</b></p>
+                            <p class="text-center">Combos</p>
                         </div>
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/plants.jpg" alt="">
-                            <p class="text-center"><b>Plants</b></p>
+                            <p class="text-center">Plants</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/chocolates.jpg" alt="">
-                            <p class="text-center"><b>Chocolates</b></p>
+                            <p class="text-center">Chocolates</p>
                         </div>
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/gifts.jpg" alt="">
-                            <p class="text-center"><b>Gifts</b></p>
+                            <p class="text-center">Gifts</p>
                         </div>
                         <div class="col-3"><img src="https://assets.winni.in/groot/2023/12/18/desktop/personalised.jpg" alt="">
-                            <p class="text-center"><b>Personalized</b></p>
+                            <p class="text-center">Personalized</p>
                         </div>
                         <div class="col-3"><img src="https://assets.winni.in/groot/2024/01/22/desktop/desktop-crystal-gift.jpg" alt="">
-                            <p class="text-center"><b>Crystal Gifts</b></p>
+                            <p class="text-center">Crystal Gifts</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cont">
+        </section>
+        <section class="cont">
             <div class="row mb-5 grid2">
-                <h2 class="text-center"><b> Must Have</b></h2>
+                <h2 class="text-center"> Must Have</h2>
                 <div class="col-sm-4">
                     <img class="col-sm-12" src="https://assets.winni.in/groot/2024/01/22/desktop/best-seller-cake.jpg?w=600" alt="">
                     <img src="https://assets.winni.in/groot/2023/12/18/desktop/air-purifying-plants.jpg" class="col-sm-12 mt-3 mb-3" alt="">
@@ -368,12 +404,187 @@
                 </div>
 
             </div>
+        </section>
+        <section class="cont">
+
+            <!-- blue container image -->
             <div>
                 <img class=" textedImage" src="https://assets.winni.in/sf-img/live/visuals/home/desktop/2024/6/1719549463526.jpg" alt="">
             </div>
-        </div>
+        </section>
 
+        <section class="cont">
 
+            <div class="row text-center grid mt-5">
+                <h2>Cakes</h2>
+                <p>Dreamy cakes for every occasion</p>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in//groot/2024/01/22/desktop/photo-cake.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Photo Cakes</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2024/01/22/desktop/kids-cake-desktop.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Kids Cakes</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2024/01/22/desktop/pinata-cake.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Pinata Cakes</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2024/01/22/desktop/bomb-cake.jpg" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Bomb Cakes</b>
+                        <p>staring from ₹2,399</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="mt-5 mb-5">
+            <div class="cont">
+                <div class="container">
+                    <span class="h2">Bestsellers</span>
+                    <button class="btn bg-black text-white btnCake btn-lg">Cakes</button>
+                    <button class="btn btnFlower btn-lg">Flowers</button>
+
+                    <div class="row  text-center cakeBtn grid  ">
+
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2023/10/89980.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>red roses bouqet with chocolate cake </p>
+                                <p>₹899</p>
+                                <button class="ratings btn btn-success">4.3</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2024/3/94564.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Marble Crunch CAke</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2023/8/88959.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Yummy Pineapple Cake</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2024/3/94610.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Delicious Rasmalai Cake</p>
+                                <p>staring from ₹2,399</p>
+                                <button class="ratings btn btn-success">4.6</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row text-center d-none flowerBtn grid ">
+
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2014/8/46820.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Miniscule Bunch Of Love </p>
+                                <p>₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2022/6/61621.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Love and emotions orchid</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">5.0</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2024/3/94426.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Red Roses and chocolate cake</p>
+                                <p>staring from ₹899</p>
+                                <button class="ratings btn btn-success">4.7</button>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 text-center rounded">
+                            <img class="img-fluid rounded" src="https://assets.winni.in/product/primary/2021/10/54271.jpeg?dpr=1&w=350" alt=""><br>
+                            <div class="photo-cakeText pt-2 pb-2 rounded">
+                                <p>Exotic red roses basket</p>
+                                <p>staring from ₹2,399</p>
+                                <button class="ratings btn btn-success">4.7</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cont">
+
+            <div class="row text-center grid mt-5">
+                <h2>Flowers</h2>
+                <p>Petals of happiness</p>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/flowers-first-image.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>roses</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/basket-arrangement.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Basket Arrangements</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/premium-flowers.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>Premium FLowers</b>
+                        <p>staring from ₹899</p>
+                    </div>
+
+                </div>
+                <div class="col-3 text-center rounded">
+                    <img class="img-fluid rounded" src="https://assets.winni.in/groot/2023/12/18/desktop/lillies.jpg?w=385" alt=""><br>
+                    <div class="photo-cakeText pt-2 pb-2 rounded">
+                        <b>lilies</b>
+                        <p>staring from ₹2,399</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
     <script>
         let nav2 = document.querySelector('.nav2');
@@ -392,6 +603,31 @@
 
             }
         });
+        let btnCake = document.querySelector('.btnCake')
+        let btnflower = document.querySelector('.btnFlower')
+        let cakeBtn = document.querySelector('.cakeBtn')
+        let flowerBtn = document.querySelector('.flowerBtn')
+        btnCake.addEventListener('click', () => {
+            flowerBtn.style.display = 'none'
+            cakeBtn.style.display = 'flex'
+            btnflower.style.backgroundColor = 'white';
+            btnflower.style.color = 'black'
+            btnCake.style.backgroundColor = 'black';
+            btnCake.style.color = 'white'
+        })
+        btnflower.addEventListener('click', () => {
+            flowerBtn.style.display = 'flex';
+            cakeBtn.style.display = 'none';
+            flowerBtn.classList.remove('d-none');
+            btnflower.style.backgroundColor = 'black';
+            btnflower.style.color = 'white'
+            btnCake.style.backgroundColor = 'white';
+            btnCake.style.color = 'black'
+            btnCake.classList.remove('bg-black');
+            btnCake.classList.remove('text-white');
+
+
+        })
     </script>
 </body>
 
