@@ -10,8 +10,330 @@
     <script src="https://kit.fontawesome.com/2a929caf52.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="s.css">
-    <style></style>
+    <!-- <link rel="stylesheet" href="s.css"> -->
+    <style>
+        /* navbar */
+        
+        nav {
+            position: fixed !important;
+            padding: 35px 10px 35px 0 !important;
+            width: 55px;
+            height: 50px;
+            top: 35px;
+            left: 35px;
+            overflow: hidden;
+            border-bottom: none;
+            background-color: white;
+            transition: width .5s ease;
+            /* Add this line */
+            z-index: 4;
+        }
+        
+        .navbar-brand {
+            left: 40px;
+            font-size: 30px;
+            color: #e04343 !important;
+            background-color: white;
+            padding: 10px;
+            position: fixed;
+            top: 35px;
+            z-index: 6;
+        }
+        
+        .navbar-brand:hover {
+            cursor: pointer;
+            opacity: .5;
+            color: #e04343 !important;
+        }
+        
+        .nav-link:hover {
+            color: #e04343;
+        }
+        
+        .navbar-nav {
+            opacity: 0;
+        }
+        
+        .navbar-nav span {
+            font-size: 10px;
+            /* text-decoration: dotted 2px black; */
+        }
+        
+        .navbar-nav i {
+            /* font-size: 20px; */
+            margin: 0 15px 0 15px;
+        }
+        
+        #home {
+            padding: 110px 0 100px;
+            background-image: url('https://technext.github.io/JohnDoe/img/header-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom center;
+        }
+        
+        @media(max-width: 767px) {
+            #home {
+                padding: 0;
+            }
+        }
+        /* #home div {
+             height: 500px; 
+        } */
+        
+        #about {
+            /* height: 100px; */
+            width: 100%;
+            padding: 90px 0 100px 0;
+            background-color: #e04343;
+        }
+        
+        #about h5 {
+            color: white;
+        }
+        
+        #about h5 span {
+            color: yellow;
+        }
+        
+        .red {
+            color: #e04343;
+        }
+        
+        .yellow {
+            color: yellow;
+        }
+        
+        .grey {
+            color: grey;
+        }
+        
+        .fontBig {
+            font-size: 6rem;
+        }
+        
+        .animatedText {
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .animatedText span {
+            position: absolute;
+            color: #e04343;
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+        }
+        
+        .animatedText span:nth-child(1) {
+            /* opacity: 0; */
+            animation-name: span1;
+            animation-duration: 15s;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+        }
+        
+        .animatedText span:nth-child(2) {
+            /* opacity: 0; */
+            animation-name: span2;
+            animation-duration: 15s;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+        }
+        
+        .animatedText span:nth-child(3) {
+            /* opacity: 1; */
+            animation-name: span3;
+            animation-duration: 15s;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+        }
+        
+        .mainText h3 {
+            font-weight: 900;
+            line-height: 0.8;
+        }
+        
+        @keyframes span3 {
+            0%,
+            20% {
+                opacity: 1;
+            }
+            35%,
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes span2 {
+            0%,
+            35% {
+                opacity: 0;
+            }
+            36%,
+            60% {
+                opacity: 1;
+            }
+            75%,
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes span1 {
+            0%,
+            75% {
+                opacity: 0;
+            }
+            80%,
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .mainText {
+            margin-top: 8%;
+            margin-left: 16%;
+        }
+        
+        .arrow {
+            margin-top: 20px;
+            height: 200px;
+            transform: translateY(100px);
+        }
+        
+        .arrowTag {
+            /* font-weight: 900; */
+            font-size: 2rem;
+            animation-name: arrow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            /* transform: rotateZ(90deg); */
+        }
+        
+        @keyframes arrow {
+            0% {
+                margin-top: 0;
+            }
+            100% {
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 420px) {
+            .mainText h3 {
+                font-size: 5rem;
+                margin-top: 95px;
+            }
+        }
+        
+        #about p {
+            margin-top: 50px;
+            color: white;
+            font-weight: 100;
+            line-height: 28px;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+        @media (max-width:550px) {
+            #about p {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+        
+        #service .container {
+            margin-bottom: 100px;
+        }
+        
+        #service h5 {
+            margin-top: 100px;
+            letter-spacing: 10px;
+        }
+        
+        #service .rounded-circle {
+            height: 200px;
+            width: 200px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e04343;
+            margin-bottom: 20px;
+            transition: all .5s;
+        }
+        
+        #service i {
+            font-size: 4rem;
+            color: #e04343;
+            transition: all .5s;
+        }
+        
+        #service .col-md-4 {
+            margin-top: 100px;
+        }
+        
+        #service .col-md-4:hover i {
+            font-size: 4.5rem;
+            color: white;
+        }
+        
+        #service .col-md-4:hover .rounded-circle {
+            background-color: #e04343;
+        }
+        
+        #service .col-md-4 p {
+            opacity: .7;
+            margin-top: 25px;
+        }
+        
+        #service .row2 .col-md-6 {
+            height: 400px;
+            /* width: ; */
+        }
+        
+        #service .row2 .col-md-6:nth-child(1) {
+            background: url('https://technext.github.io/JohnDoe/img/about1.png');
+        }
+        
+        #service .row2 .col-md-6:nth-child(2) {
+            background-color: #e04343;
+        }
+        
+        #service .row2 .col-md-6:nth-child(3) {
+            background-color: white;
+        }
+        
+        #service .row2 .col-md-6:nth-child(4) {
+            background: url('https://technext.github.io/JohnDoe/img/about2.png');
+        }
+        
+        #service .row2 .col-md-6:nth-child(5) {
+            background: url('https://technext.github.io/JohnDoe/img/about3.png');
+        }
+        
+        #service .row2 .col-md-6:nth-child(6) {
+            background-color: #e04343;
+        }
+        
+        #service .row2 .col-md-6 hr {
+            width: 80px;
+            height: 2px;
+            border: none;
+            background-color: white;
+            margin: none;
+            opacity: 1;
+        }
+        
+        #service .row2 .col-md-6:nth-child(3) p,
+        #service .row2 .col-md-6:nth-child(3) h6 {
+            opacity: .7;
+        }
+        
+        #service .row2 .col-md-6:nth-child(3) hr {
+            opacity: .5;
+            background-color: black;
+        }
+    </style>
 
 </head>
 
