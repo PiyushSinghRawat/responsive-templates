@@ -88,12 +88,8 @@
             background-color: #e04343;
         }
         
-        #about h5 {
+        #about .aboutHeading {
             color: white;
-        }
-        
-        #about h5 span {
-            color: yellow;
         }
         
         .red {
@@ -108,52 +104,49 @@
             color: grey;
         }
         
-        .fontBig {
-            font-size: 6rem;
-        }
-        
-        .animatedText {
+        .animatedTextContainer {
             position: relative;
             margin-top: 10px;
         }
         
-        .animatedText span {
+        .animatedTextContainer .animatedText {
             position: absolute;
             color: #e04343;
             font-size: 1.5rem;
             letter-spacing: 10px;
         }
         
-        .animatedText span:nth-child(1) {
+        .animatedTextContainer .animatedText1 {
             /* opacity: 0; */
-            animation-name: span1;
+            animation-name: animatedText1;
             animation-duration: 15s;
             animation-direction: normal;
             animation-iteration-count: infinite;
         }
         
-        .animatedText span:nth-child(2) {
+        .animatedTextContainer .animatedText2 {
             /* opacity: 0; */
-            animation-name: span2;
+            animation-name: animatedText2;
             animation-duration: 15s;
             animation-direction: normal;
             animation-iteration-count: infinite;
         }
         
-        .animatedText span:nth-child(3) {
+        .animatedTextContainer .animatedText3 {
             /* opacity: 1; */
-            animation-name: span3;
+            animation-name: animatedText3;
             animation-duration: 15s;
             animation-direction: normal;
             animation-iteration-count: infinite;
         }
         
-        .mainText h3 {
+        .mainTextHeading {
             font-weight: 900;
             line-height: 0.8;
+            font-size: 6rem;
         }
         
-        @keyframes span3 {
+        @keyframes animatedText3 {
             0%,
             20% {
                 opacity: 1;
@@ -164,7 +157,7 @@
             }
         }
         
-        @keyframes span2 {
+        @keyframes animatedText2 {
             0%,
             35% {
                 opacity: 0;
@@ -179,7 +172,7 @@
             }
         }
         
-        @keyframes span1 {
+        @keyframes animatedText1 {
             0%,
             75% {
                 opacity: 0;
@@ -195,19 +188,17 @@
             margin-left: 16%;
         }
         
-        .arrow {
+        .firstArrowContainer {
             margin-top: 20px;
             height: 200px;
             transform: translateY(100px);
         }
         
         .arrowTag {
-            /* font-weight: 900; */
             font-size: 2rem;
             animation-name: arrow;
             animation-duration: 1s;
             animation-iteration-count: infinite;
-            /* transform: rotateZ(90deg); */
         }
         
         @keyframes arrow {
@@ -220,7 +211,7 @@
         }
         
         @media (max-width: 420px) {
-            .mainText h3 {
+            .mainTextHeading {
                 font-size: 5rem;
                 margin-top: 95px;
             }
@@ -242,16 +233,16 @@
             }
         }
         
-        #service .container {
+        .hoverImageMainContainer {
             margin-bottom: 100px;
         }
         
-        #service h5 {
+        .serviceHeading {
             margin-top: 100px;
             letter-spacing: 10px;
         }
         
-        #service .rounded-circle {
+        .circleHoverImage {
             height: 200px;
             width: 200px;
             display: grid;
@@ -262,60 +253,60 @@
             transition: all .5s;
         }
         
-        #service i {
+        .circleHoverImageColumn i {
             font-size: 4rem;
             color: #e04343;
             transition: all .5s;
         }
         
-        #service .col-md-4 {
+        .circleHoverImageColumn {
             margin-top: 100px;
         }
         
-        #service .col-md-4:hover i {
+        .circleHoverImageColumn:hover i {
             font-size: 4.5rem;
             color: white;
         }
         
-        #service .col-md-4:hover .rounded-circle {
+        .circleHoverImageColumn:hover .circleHoverImage {
             background-color: #e04343;
         }
         
-        #service .col-md-4 p {
+        .circleHoverImageColumn p {
             opacity: .7;
             margin-top: 25px;
         }
         
-        #service .row2 .col-md-6 {
+        .serviceImgSec .col-md-6 {
             height: 400px;
             /* width: ; */
         }
         
-        #service .row2 .col-md-6:nth-child(1) {
+        .serviceImgSec .col-md-6:nth-child(1) {
             background: url('https://technext.github.io/JohnDoe/img/about1.png');
         }
         
-        #service .row2 .col-md-6:nth-child(2) {
+        .serviceImgSec .col-md-6:nth-child(2) {
             background-color: #e04343;
         }
         
-        #service .row2 .col-md-6:nth-child(3) {
+        .serviceImgSec .col-md-6:nth-child(3) {
             background-color: white;
         }
         
-        #service .row2 .col-md-6:nth-child(4) {
+        .serviceImgSec .col-md-6:nth-child(4) {
             background: url('https://technext.github.io/JohnDoe/img/about2.png');
         }
         
-        #service .row2 .col-md-6:nth-child(5) {
+        .serviceImgSec .col-md-6:nth-child(5) {
             background: url('https://technext.github.io/JohnDoe/img/about3.png');
         }
         
-        #service .row2 .col-md-6:nth-child(6) {
+        .serviceImgSec .col-md-6:nth-child(6) {
             background-color: #e04343;
         }
         
-        #service .row2 .col-md-6 hr {
+        .serviceImgSec .col-md-6 hr {
             width: 80px;
             height: 2px;
             border: none;
@@ -324,17 +315,163 @@
             opacity: 1;
         }
         
-        #service .row2 .col-md-6:nth-child(3) p,
-        #service .row2 .col-md-6:nth-child(3) h6 {
+        .serviceImgSec .col-md-6:nth-child(3) p,
+        .serviceImgSec .col-md-6:nth-child(3) h6 {
             opacity: .7;
         }
         
-        #service .row2 .col-md-6:nth-child(3) hr {
+        .serviceImgSec .col-md-6:nth-child(3) hr {
             opacity: .5;
             background-color: black;
         }
+        
+        .portfolioHeading p {
+            letter-spacing: 10px;
+            font-weight: 700;
+        }
+        
+        .portfolioHeading {
+            line-height: 1px;
+        }
+        
+        #portfolioHeading h6 {
+            color: #e04343;
+            font-size: 2rem;
+            letter-spacing: 10px;
+        }
+        
+        #portfolio .col-md-3 {
+            overflow: clip;
+        }
+        
+        #portfolio .col-md-3 img {
+            object-fit: cover;
+            transition: transform .5s, filter .2s;
+            filter: grayscale(100%);
+        }
+        
+        #portfolio .col-md-3 img:hover {
+            filter: grayscale(0);
+            transform: translateX(-30px);
+        }
+        
+        #portfolio .container-fluid {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: #e04343;
+            padding: 40px 0 40px 0;
+        }
+        
+        #portfolio .container-fluid button {
+            height: 80px;
+        }
+        
+        #portfolio .container-fluid button:hover {
+            color: #e04343;
+        }
+        
+        @media (max-width:765px) {
+            #portfolio .col-md-3 img {
+                margin-top: 50px;
+            }
+        }
+        
+        #blog .carousel-item .row .col-md-4 {
+            overflow: clip;
+            padding: 0 !important;
+            border-right: 20px solid white;
+            /* margin-left: 10px; */
+            /* margin-right: 10px; */
+        }
+        
+        #blog .carousel-item .row .col-md-4 img {
+            object-fit: cover;
+            transition: all .5s;
+            filter: grayscale(100%);
+        }
+        
+        #blog .carousel-item .row .col-md-4:hover img {
+            transform: translateX(-30px);
+            filter: grayscale(0);
+        }
+        
+        .blogIndicator {
+            color: #e04343;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: max-content;
+            margin: 0 auto -50px auto !important;
+        }
+        
+        .blogIndicator button {
+            background-color: yellow !important;
+            height: 20px !important;
+            width: 20px !important;
+            border-radius: 50%;
+        }
+        
+        .blogIndicator button:focus,
+        .blogIndicator button.active {
+            background-color: #e04343 !important;
+        }
+        
+        .blogCarouosel {
+            position: relative;
+        }
+        
+        .blogImgSec .col-md-6 {
+            height: 400px;
+            /* width: ; */
+        }
+        
+        .blogImgSec .col-md-6:nth-child(1) {
+            background: url('https://technext.github.io/JohnDoe/img/clients.png');
+        }
+        
+        .blogImgSec .col-md-6:nth-child(2) {
+            background-color: lightpink;
+        }
+        
+        .blogImgSec .col-md-6:nth-child(3) {
+            background-color: white;
+        }
+        
+        .blogImgSec .col-md-6:nth-child(4) {
+            background: url('https://technext.github.io/JohnDoe/img/newsletter.png');
+        }
+        
+        .blogImgSec .col-md-6 hr {
+            width: 80px;
+            height: 2px;
+            border: none;
+            background-color: white;
+            margin: none;
+            opacity: 1;
+        }
+        
+        .blogImgSec .col-md-6:nth-child(3) p,
+        .blogImgSec .col-md-6:nth-child(3) h6 {
+            opacity: .7;
+        }
+        
+        .blogImgSec .col-md-6:nth-child(3) hr {
+            opacity: .5;
+            background-color: black;
+        }
+        
+        .secIndBtn {
+            /* background-color: yellow !important; */
+            height: 20px !important;
+            width: 20px !important;
+            border-radius: 50%;
+        }
+        /* .secIndBtn:focus,
+.secIndBtn.active {
+    background-color: blue !important;
+} */
     </style>
-
 </head>
 
 <body>
@@ -342,7 +479,7 @@
 
         <nav class="navbar navbar-expand-sm  ">
             <a class="navbar-brand"> <i class="fa-solid fa-bars  ">
-        </i></a>
+                </i></a>
 
             <div class=" container-fluid d-flex">
                 <ul class="navbar-nav ms-auto">
@@ -354,7 +491,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-regular fa-address-card"></i>
-              <br><span class="text-center">ABOUT</span></a>
+                            <br><span class="text-center">ABOUT</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#">
@@ -373,7 +510,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-solid fa-image"></i> <br><span
-                class="text-center">PORTFOLIO</span></a>
+                                class="text-center">PORTFOLIO</span></a>
                     </li>
 
 
@@ -385,16 +522,15 @@
         <section id="home">
             <div class="container-fluid">
                 <div class="mainText">
-                    <h3 class="fontBig mb-0" data-aos="fade-down" data-aos-duration="2000">J<span class="red">O</span>HN<br><span class="grey"> D<span
-                class="yellow">O</span>E</span>
+                    <h3 class="mainTextHeading mb-0" data-aos="fade-down" data-aos-duration="2000">J<span class="red">O</span>HN<br><span class="grey"> D<span class="yellow">O</span>E</span>
                     </h3>
-                    <div class="animatedText" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-                        <span>WEB DESIGNER</span>
-                        <span>3D ARTIST</span>
-                        <span>PHOTOGRAPHER</span>
+                    <div class="animatedTextContainer" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <span class="animatedText animatedText1">WEB DESIGNER</span>
+                        <span class="animatedText animatedText2">3D ARTIST</span>
+                        <span class="animatedText animatedText3">PHOTOGRAPHER</span>
                     </div>
                 </div>
-                <div class="arrow">
+                <div class="firstArrowContainer">
                     <p class="text-center text-white"> SEE MORE</p>
                     <p class="text-center mx-auto text-white arrowTag"><i class="fa-solid fa-angle-down"></i></p>
                 </div>
@@ -402,44 +538,44 @@
         </section>
         <section id="about">
             <div data-aos="fade-right" data-aos-duration="1000">
-                <h5 class="text-center">A LIITLE <span> ABOUT</span> ME</h5>
+                <h5 class="text-center aboutHeading">A LIITLE <span class="yellow"> ABOUT</span> ME</h5>
                 <p>I am enough of an artist to draw freely upon my imagination. The point is that when I see a sunset or a waterfall or something, for a split second it's so great, because for a little bit I'm out of my brain, and it's got nothing to do
                     with me. I'm not trying to figure it out, you know what I mean? And I wonder if I can somehow find a way to maintain that mind stillness.</p>
             </div>
         </section>
         <section id="service">
-            <div class="container">
+            <div class="container hoverImageMainContainer">
                 <div class="row">
-                    <h5 class="text-center">I DO AMAZING THINGS FOR CLIENTS</h5 class="text-center">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="50">
-                        <div class="rounded-circle text-center  mx-auto">
+                    <h5 class="text-center serviceHeading">I DO AMAZING THINGS FOR CLIENTS</h5 class="text-center">
+                    <div class="col-md-4 circleHoverImageColumn " data-aos="fade-up" data-aos-duration="2000" data-aos-delay="50">
+                        <div class="rounded-circle text-center  mx-auto circleHoverImage">
                             <i class="fa-solid fa-camera"></i>
                         </div>
                         <h4 class="text-center">PHOTOGRAPHER</h4>
                         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="350">
-                        <div class="rounded-circle text-center  mx-auto">
+                    <div class="col-md-4 circleHoverImageColumn" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="350">
+                        <div class="rounded-circle text-center  mx-auto circleHoverImage">
 
                             <i class="fa-solid fa-desktop"></i>
                         </div>
                         <h4 class="text-center">WEB DESIGNER</h4>
                         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                     </div>
-                    <div class="col-md-4 " data-aos="fade-up" data-aos-duration="2000" data-aos-delay="650">
-                        <div class="rounded-circle text-center  mx-auto">
-                            <i class="fa-solid fa-cubes "></i>
+                    <div class="col-md-4 circleHoverImageColumn " data-aos="fade-up" data-aos-duration="2000" data-aos-delay="650">
+                        <div class="rounded-circle text-center  mx-auto circleHoverImage">
+                            <i class="yo fa-solid fa-cubes "></i>
                         </div>
                         <h4 class="text-center">3D ARITST</h4>
                         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                     </div>
                 </div>
             </div>
-            <div class="row row2">
-                <div class="col-md-6">
+            <div class="row serviceImgSec m-0">
+                <div class="col-md-6 ">
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <div class="container mt-5 text-white">
                         <h6>HIGH QUALITY WEBDESIGN</h6>
                         <hr class="text-white">
@@ -449,7 +585,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <div class="container mt-5 ">
                         <h6>HIGH QUALITY WEBDESIGN</h6>
                         <hr class="text-white">
@@ -459,9 +595,9 @@
 
                     </div>
                 </div>
-                <div class="col-md-6"></div>
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 "></div>
+                <div class="col-md-6 "></div>
+                <div class="col-md-6 ">
                     <div class="container mt-5 text-white">
                         <h6>HIGH QUALITY WEBDESIGN</h6>
                         <hr class=" text-white ">
@@ -473,8 +609,155 @@
 
             </div>
         </section>
+        <section id="portfolio">
+            <div class="portfolioHeading text-center mt-5">
+                <p>RECENT</p>
+                <h6>PROJECTS</h6>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-01-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-02-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-03-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-04-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-05-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-06-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-07-thumbnail.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3  p-0">
+                        <img src="https://technext.github.io/JohnDoe/img/portfolio/portfolio-08-thumbnail.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-fluid">
+                <button class="btn btn-outline-warning">HIRE JOHN DOE</button>
+            </div>
+        </section>
+        <section id="blog">
+            <h5 class="text-center mt-5 mb-5">MY <span class="red">  LITTLE</span> BLOG</h5>
+            <!-- Carousel -->
+            <div class="container ">
+                <div id="carousel" class="carousel slide blogCarouosel" data-bs-ride="carousel">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators m-0 blogIndicator">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    </div>
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner mb-5">
+                        <div class="carousel-item active">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="https://technext.github.io/JohnDoe/img/blog1.jpg" alt="">
+
+                                    <h5 class="m-0"> CREATIVE MINDS</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <img src="https://technext.github.io/JohnDoe/img/blog2.jpg" alt="">
+                                    <h5>CREATIVE MINDS</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="https://technext.github.io/JohnDoe/img/blog3.jpg" alt="">
+                                    <h5>CREATIVE MINDS</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="https://technext.github.io/JohnDoe/img/blog1.jpg" alt="">
+                                    <h5>CREATIVE MINDS</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <img src="https://technext.github.io/JohnDoe/img/blog2.jpg" alt="">
+                                    <h5>CREATIVE MINDS</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="https://technext.github.io/JohnDoe/img/blog3.jpg" alt="">
+                                    <h5>CREATIVE MINDS</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row blogImgSec m-0">
+                <div class="col-md-6 ">
+
+                </div>
+                <div class="col-md-6 ">
+                    <div class="container mt-5 text-white">
+                        <h6>HIGH QUALITY WEBDESIGN</h6>
+                        <hr class="text-white">
+                        <div id="carousel2" class="carousel slide blogCarouosel" data-bs-ride="carousel">
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators m-0 blogIndicator">
+                                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active secIndBtn"></button>
+                                <button class="secIndBtn" type="button" data-bs-target="#carousel2" data-bs-slide-to="1"></button>
+                                <button class="secIndBtn" type="button" data-bs-target="#carousel2" data-bs-slide-to="2"></button>
+
+                            </div>
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner mb-5">
+                                <div class="carousel-item active">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. - Tom Davis, GreenWonder Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. - Pete Rock, A New Tomorrow</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. - Tom Davis, GreenWonder Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. - Pete Rock, A New Tomorrow</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. - Tom Davis, GreenWonder Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. - Pete Rock, A New Tomorrow</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="container mt-5 ">
+                        <h6>HIGH QUALITY WEBDESIGN</h6>
+                        <hr class="text-white">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                        <button class="btn btn-outline-dark mt-5">READ MORE</button>
+
+                    </div>
+                </div>
+                <div class="col-md-6 "></div>
 
 
+            </div>
+        </section>
 
     </main>
 
